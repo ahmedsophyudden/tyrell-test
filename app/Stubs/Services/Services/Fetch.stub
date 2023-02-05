@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Services\Modules\$MODULE$\$SERVICE_MODULE_NAMESPACE$\Services;
+
+use App\Models\$MODULE$\$MODEL$;
+use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
+use App\Services\Classes\Abstracts\AbstractFetchRecord;
+
+class $MODEL$Fetch extends AbstractFetchRecord
+{
+    /**
+     * @return Builder
+     */
+    public function getBuilder(): Builder
+    {
+        return (new $MODEL$)->newQuery();
+    }
+
+}

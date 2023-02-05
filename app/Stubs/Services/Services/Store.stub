@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Services\Modules\$MODULE$\$SERVICE_MODULE_NAMESPACE$\Services;
+
+use App\Models\$MODULE$\$MODEL$;
+use Illuminate\Database\Eloquent\Model;
+use App\Services\Classes\Abstracts\AbstractStoreService;
+use App\Services\Classes\Abstracts\AbstractDataTransferObject;
+use App\Services\Modules\$MODULE$\$SERVICE_MODULE_NAMESPACE$\DataTransferObjects\$MODEL$Dto;
+
+class $MODEL$Store extends AbstractStoreService
+{
+    protected function model() : Model {
+        return new $MODEL$;
+    }
+
+    protected function dataTransferObject() : AbstractDataTransferObject {
+        return new $MODEL$Dto([]);
+    }
+}
